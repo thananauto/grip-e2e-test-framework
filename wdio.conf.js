@@ -1,7 +1,7 @@
 const fs = require("fs");
 const fsExtra = require('fs-extra')
 const debug = process.env.DEBUG;
-const debugTimeOut = debug ? 24 * 60 * 60 * 1000 : 600000 ;
+const debugTimeOut = debug ? 24 * 60 * 60 * 1000 : 6000;
 const maxInstances = debug ? 1 : 10;  
 
 exports.config = {
@@ -26,7 +26,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/Login.spec.ts'
+        './test/**/**.spec.ts'
     ],
     // Patterns to exclude.
     exclude: [

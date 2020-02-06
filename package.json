@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio",
-    "dev": "wdio --spec",
+    "dev": " lint && wdio --spec",
     "lint": "tslint --fix 'test/**/*.ts' && tslint --fix 'src/**/*.ts'",
     "report:history": "mkdir -p allure-report/history allure-results/history && cp -a allure-report/history allure-results/",
     "clean-report": "rimraf allure-results  &&  rimraf error-pages ",
     "run-report": "allure generate allure-results/ --clean && allure open -p 8080",
     "report": "npm run clean-report && mkdir -p error-pages && npm run test ; npm run run-report"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "webdriverio",
+    "typescript"],
+    
+  "author": "thanan",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.2.8",
