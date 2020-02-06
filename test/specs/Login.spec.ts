@@ -44,7 +44,6 @@ describe('validate the login page functionality', ()=>{
     it('verify the password recover functionality', () =>{
 
        const email= 'test@test.com';
-       //LoginPage.validatePasswordRecovery(email);
        LoginPage.enterUserName(email);
        LoginPage.clickNextButton();
 
