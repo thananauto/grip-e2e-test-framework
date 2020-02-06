@@ -49,18 +49,11 @@ class LoginPage extends BasePage {
         return $('div=Sign up');
     }
 
-    /**
-     * Enter the username and validate the value attribute set in the text field
-     * @param username
-     */
     enterUserName(username: string): void {
             this.userName.setValue(username);
            }
 
-    /**
-     * Enter the password and validate the value attribute is set in the text field
-     * @param password
-     */
+ 
      enterPassWord(password: string): void {
          this.passWord.setValue(password)
      }
@@ -70,7 +63,7 @@ class LoginPage extends BasePage {
      }
 
      clickForgotPassword(): void {
-        browser.setTimeout({ 'implicit': 5000 });
+        browser.setTimeout({ 'implicit': 5000 }); // to handle the command to click the Forgotpassword link
         this.forgotPassword.click();
         browser.setTimeout({ 'implicit': 0 }) //setting back to default
      }
@@ -79,22 +72,6 @@ class LoginPage extends BasePage {
         this.sendTheLink.waitForClickable();
         this.sendTheLink.click();
      }
-
-    /**
-     * Validate the password recovery link functionality
-     * @param username
-     */
-    validatePasswordRecovery(username: string): void {
-            this.enterUserName(username);
-            this.nextButton.click();
-            assert.equal(this.userName.getAttribute('value'),`${username}`, 'the email address should present in text field');
-            browser.setTimeout({ 'implicit': 5000 })
-            this.forgotPassword.click();
-            this.sendTheLink.waitForClickable();
-            this.sendTheLink.click();
-
-
-    }
 
 }
 
