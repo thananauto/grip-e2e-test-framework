@@ -1,7 +1,7 @@
 {
-  "name": "webdriverio-typescript-mocha",
+  "name": "grip_e2e_test_framework",
   "version": "1.0.0",
-  "description": "This is the UI test framework which built on top of webdriver-io and mocha",
+  "description": "This is the UI test automation framework",
   "main": "index.js",
   "scripts": {
     "test": "wdio",
@@ -15,7 +15,7 @@
   "keywords": [
     "webdriverio",
     "typescript"],
-    
+
   "author": "thanan",
   "license": "ISC",
   "devDependencies": {

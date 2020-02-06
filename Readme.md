@@ -1,21 +1,24 @@
 # Grip_E2E_test_framework
 
-This is a powerful boilerplate for UI automation test that uses WebdriverIO v5 and TypeScript v3. This framework includes examples of the PageObject pattern and using WebdriverIO to build an automated test suite with Mocha & Chai.
+This is a boilerplate for UI automation test that uses `WebdriverIO v5` and `TypeScript v3`. This framework includes examples of the PageObject pattern and using WebdriverIO to build an automated test suite with Mocha & Chai.
 
 ## Features
 + Use Page Object Model for managing your test cases
 + [Mocha](https://mochajs.org/) + [Chai](https://www.chaijs.com/) for verification and validation
-+ Interactive report with [Allure](https://webdriver.io/docs/allure-reporter.html)
++ Use [TypeScript](https://www.typescriptlang.org/docs/handbook/basic-types.html) for coding
++ Interactive HTML report with [Allure](https://webdriver.io/docs/allure-reporter.html)
 
 ## Getting Started
 
 ```sh
+git clone git@github.com:thananauto/grip-e2e-test-framework.git
+cd grip-e2e-test-framework
 npm install
 ```
 
 ## Running Tests
 
-Run all tests. Mocha will look for test folder. If you need to use another folder, please specify it in package.json file.
+Run all tests. Mocha will look for test folder. If you need to use another folder, please specify it in `wdio.conf.js` file.
 
 ```sh
 npm run test
